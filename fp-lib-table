@@ -1,0 +1,6 @@
+(fp_lib_table
+  (lib (name PD_footprint)(type KiCad)(uri ${KIPRJMOD}/footprints/modified_footprints.pretty)(options "")(descr ""))
+  (lib (name SAMTEC_conn)(type KiCad)(uri ${KIPRJMOD}/footprints/SAMTEC_conn.pretty)(options "")(descr ""))
+  (lib (name A03P12)(type KiCad)(uri ${KIPRJMOD}/footprints/A03P12.pretty)(options "")(descr ""))
+  (lib (name CUI)(type KiCad)(uri ${KIPRJMOD}/footprints/CUI.pretty)(options "")(descr ""))
+)

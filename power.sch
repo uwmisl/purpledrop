@@ -1,0 +1,321 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 5 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Barrel_Jack_Switch J9
+U 1 1 5D30D443
+P 1850 1300
+F 0 "J9" H 1907 1617 50  0000 C CNN
+F 1 "Barrel_Jack_Switch" H 1907 1526 50  0000 C CNN
+F 2 "Connect:BARREL_JACK" H 1900 1260 50  0001 C CNN
+F 3 "~" H 1900 1260 50  0001 C CNN
+	1    1850 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 1200 2650 1200
+Wire Wire Line
+	2150 1400 2300 1400
+Wire Wire Line
+	3000 1400 3000 1550
+$Comp
+L power:GND #PWR0140
+U 1 1 5D30DFF0
+P 3000 1550
+F 0 "#PWR0140" H 3000 1300 50  0001 C CNN
+F 1 "GND" H 3005 1377 50  0000 C CNN
+F 2 "" H 3000 1550 50  0001 C CNN
+F 3 "" H 3000 1550 50  0001 C CNN
+	1    3000 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0141
+U 1 1 5D30E639
+P 3000 1200
+F 0 "#PWR0141" H 3000 1050 50  0001 C CNN
+F 1 "+12V" H 3015 1373 50  0000 C CNN
+F 2 "" H 3000 1200 50  0001 C CNN
+F 3 "" H 3000 1200 50  0001 C CNN
+	1    3000 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 1300 2300 1300
+Wire Wire Line
+	2300 1300 2300 1400
+Connection ~ 2300 1400
+Wire Wire Line
+	2300 1400 2650 1400
+Wire Notes Line
+	500  2100 3600 2100
+Wire Notes Line
+	3600 2100 3600 500 
+Text Notes 3150 2050 0    50   ~ 0
+12v input
+$Comp
+L Device:CP1_Small C13
+U 1 1 5D33CA4E
+P 2650 1300
+F 0 "C13" H 2741 1346 50  0000 L CNN
+F 1 "47uF" H 2741 1255 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_5x5.8" H 2650 1300 50  0001 C CNN
+F 3 "~" H 2650 1300 50  0001 C CNN
+F 4 "UCV1V681MNL1GS" H 2650 1300 50  0001 C CNN "PN"
+	1    2650 1300
+	1    0    0    -1  
+$EndComp
+Connection ~ 2650 1200
+Connection ~ 2650 1400
+Wire Wire Line
+	2650 1200 3000 1200
+Wire Wire Line
+	2650 1400 3000 1400
+$Comp
+L a03p-12:A03P-12 U74
+U 1 1 5D34B48A
+P 5500 1500
+F 0 "U74" H 5500 1363 60  0000 C CNN
+F 1 "A03P-12" H 5500 1469 60  0000 C CNN
+F 2 "A03P12:A03P-12" H 5500 1500 60  0001 C CNN
+F 3 "" H 5500 1500 60  0001 C CNN
+	1    5500 1500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Regulator_Linear:LR8N8-G U75
+U 1 1 5D34C70A
+P 7000 1850
+F 0 "U75" H 7000 2117 50  0000 C CNN
+F 1 "LR8N8-G" H 7000 2026 50  0000 C CNN
+F 2 "PD_footprint:SOT-89-3" H 7000 1900 50  0001 C CNN
+F 3 "http://www.supertex.com/pdf/datasheets/LR8.pdf" H 7000 1850 50  0001 C CNN
+	1    7000 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Zener_Small D2
+U 1 1 5D34C935
+P 5700 2200
+F 0 "D2" H 5700 2405 50  0000 C CNN
+F 1 "200v" H 5700 2314 50  0000 C CNN
+F 2 "Diode_SMD:D_SMB" V 5700 2200 50  0001 C CNN
+F 3 "~" V 5700 2200 50  0001 C CNN
+	1    5700 2200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:D_Zener_Small D1
+U 1 1 5D34CE78
+P 5300 2200
+F 0 "D1" H 5300 2405 50  0000 C CNN
+F 1 "200v" H 5300 2314 50  0000 C CNN
+F 2 "Diode_SMD:D_SMB" V 5300 2200 50  0001 C CNN
+F 3 "~" V 5300 2200 50  0001 C CNN
+	1    5300 2200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:D_Small D3
+U 1 1 5D34D306
+P 7000 1450
+F 0 "D3" H 7000 1563 50  0000 C CNN
+F 1 "D_Small" H 7000 1564 50  0001 C CNN
+F 2 "Diode_SMD:D_SMB" V 7000 1450 50  0001 C CNN
+F 3 "~" V 7000 1450 50  0001 C CNN
+	1    7000 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0142
+U 1 1 5D3501C1
+P 4700 2000
+F 0 "#PWR0142" H 4700 1750 50  0001 C CNN
+F 1 "GND" H 4705 1827 50  0000 C CNN
+F 2 "" H 4700 2000 50  0001 C CNN
+F 3 "" H 4700 2000 50  0001 C CNN
+	1    4700 2000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 1900 4700 2000
+$Comp
+L power:+12V #PWR0143
+U 1 1 5D3508D2
+P 4700 1450
+F 0 "#PWR0143" H 4700 1300 50  0001 C CNN
+F 1 "+12V" H 4715 1623 50  0000 C CNN
+F 2 "" H 4700 1450 50  0001 C CNN
+F 3 "" H 4700 1450 50  0001 C CNN
+	1    4700 1450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 1600 4700 1600
+Wire Wire Line
+	4700 1600 4700 1450
+Wire Wire Line
+	4900 1700 4700 1700
+Wire Wire Line
+	4700 1700 4700 1600
+Connection ~ 4700 1600
+Wire Wire Line
+	4700 1800 4700 1900
+Connection ~ 4700 1900
+Wire Wire Line
+	4700 1800 4900 1800
+Wire Wire Line
+	4700 1900 4850 1900
+Wire Wire Line
+	4850 1900 4850 2200
+Wire Wire Line
+	4850 2200 5200 2200
+Connection ~ 4850 1900
+Wire Wire Line
+	4850 1900 4900 1900
+Wire Wire Line
+	5400 2200 5600 2200
+Wire Wire Line
+	5800 2200 6300 2200
+Wire Wire Line
+	6300 2200 6300 1850
+Wire Wire Line
+	6300 1850 6100 1850
+Wire Wire Line
+	6300 1850 6500 1850
+Connection ~ 6300 1850
+Wire Wire Line
+	6900 1450 6500 1450
+Wire Wire Line
+	6500 1450 6500 1850
+Connection ~ 6500 1850
+Wire Wire Line
+	6500 1850 6600 1850
+Wire Wire Line
+	7100 1450 7550 1450
+Wire Wire Line
+	7550 1450 7550 1850
+Wire Wire Line
+	7550 1850 7400 1850
+$Comp
+L power:GND #PWR0144
+U 1 1 5D3572B9
+P 7800 3650
+F 0 "#PWR0144" H 7800 3400 50  0001 C CNN
+F 1 "GND" H 7805 3477 50  0000 C CNN
+F 2 "" H 7800 3650 50  0001 C CNN
+F 3 "" H 7800 3650 50  0001 C CNN
+	1    7800 3650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R10
+U 1 1 5D357D29
+P 7800 2050
+F 0 "R10" H 7868 2096 50  0000 L CNN
+F 1 "2k4" H 7868 2005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 7800 2050 50  0001 C CNN
+F 3 "~" H 7800 2050 50  0001 C CNN
+	1    7800 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R12
+U 1 1 5D358495
+P 7800 2800
+F 0 "R12" H 7868 2846 50  0000 L CNN
+F 1 "200k" H 7868 2755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 7800 2800 50  0001 C CNN
+F 3 "~" H 7800 2800 50  0001 C CNN
+	1    7800 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R13
+U 1 1 5D358B4C
+P 7800 3100
+F 0 "R13" H 7868 3146 50  0000 L CNN
+F 1 "200k" H 7868 3055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 7800 3100 50  0001 C CNN
+F 3 "~" H 7800 3100 50  0001 C CNN
+	1    7800 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R14
+U 1 1 5D358E0A
+P 7800 3400
+F 0 "R14" H 7868 3446 50  0000 L CNN
+F 1 "200k" H 7868 3355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 7800 3400 50  0001 C CNN
+F 3 "~" H 7800 3400 50  0001 C CNN
+	1    7800 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 2900 7800 3000
+Wire Wire Line
+	7800 3200 7800 3300
+Wire Wire Line
+	7550 1850 7800 1850
+Wire Wire Line
+	7800 1850 7800 1950
+Connection ~ 7550 1850
+Text Notes 8200 2450 0    50   ~ 0
+higher resistance = lower voltage\n
+$Comp
+L Device:R_POT_US R11
+U 1 1 5D35B4CF
+P 7800 2450
+F 0 "R11" H 7733 2496 50  0000 R CNN
+F 1 "2k" H 7733 2405 50  0000 R CNN
+F 2 "Potentiometers:Potentiometer_Trimmer_Bourns_3214W" H 7800 2450 50  0001 C CNN
+F 3 "~" H 7800 2450 50  0001 C CNN
+F 4 " 3214W-1-502E" H 7800 2450 50  0001 C CNN "PN"
+	1    7800 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 2600 7800 2650
+Wire Wire Line
+	7950 2450 8050 2450
+Wire Wire Line
+	7800 2150 7800 2250
+Wire Wire Line
+	7800 2250 8050 2250
+Wire Wire Line
+	8050 2250 8050 2450
+Connection ~ 7800 2250
+Wire Wire Line
+	7800 2250 7800 2300
+Wire Wire Line
+	7800 1850 8650 1850
+Connection ~ 7800 1850
+Text GLabel 8650 1850 2    50   Input ~ 0
+V_HV
+Wire Wire Line
+	7000 2150 7000 2650
+Wire Wire Line
+	7000 2650 7800 2650
+Connection ~ 7800 2650
+Wire Wire Line
+	7800 2650 7800 2700
+Wire Wire Line
+	7800 3500 7800 3650
+Text Notes 7550 2300 0    50   ~ 0
+ccw
+Text Notes 7550 2600 0    50   ~ 0
+cw
+$EndSCHEMATC
