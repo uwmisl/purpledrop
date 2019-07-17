@@ -2,4 +2,5 @@
   (lib (name PurpleDrop)(type Legacy)(uri ${KIPRJMOD}/symbols/PD_symbols.lib)(options "")(descr ""))
   (lib (name RRE04EA6DFH)(type Legacy)(uri ${KIPRJMOD}/symbols/RRE04EA6DFH.lib)(options "")(descr ""))
   (lib (name a03p-12)(type Legacy)(uri ${KIPRJMOD}/symbols/a03p-12.lib)(options "")(descr ""))
+  (lib (name PDQE15-Q24-S5-D)(type Legacy)(uri ${KIPRJMOD}/symbols/PDQE15-Q24-S5-D.lib)(options "")(descr ""))
 )
