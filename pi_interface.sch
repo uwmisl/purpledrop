@@ -156,7 +156,7 @@ Wire Wire Line
 Wire Wire Line
 	5750 1200 6200 1200
 Wire Wire Line
-	5750 1400 6200 1400
+	5750 1400 5950 1400
 Text Label 4550 1200 0    50   ~ 0
 pi_latch
 Text Label 4550 1400 0    50   ~ 0
@@ -271,7 +271,7 @@ Wire Wire Line
 Wire Wire Line
 	9500 1400 9050 1400
 Wire Wire Line
-	10300 1200 10750 1200
+	10300 1200 10500 1200
 Text Label 6850 1200 0    50   ~ 0
 pi_blank
 Text Label 6850 1400 0    50   ~ 0
@@ -605,4 +605,32 @@ Wire Wire Line
 	900  1200 1500 1200
 Wire Wire Line
 	2000 2200 2500 2200
+$Comp
+L Connector:TestPoint_Alt TP1
+U 1 1 5D6169CB
+P 5950 1400
+F 0 "TP1" H 6008 1472 50  0000 L CNN
+F 1 "TestPoint_Alt" H 6008 1427 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Keystone_5000-5004_Miniature" H 6150 1400 50  0001 C CNN
+F 3 "~" H 6150 1400 50  0001 C CNN
+	1    5950 1400
+	1    0    0    -1  
+$EndComp
+Connection ~ 5950 1400
+Wire Wire Line
+	5950 1400 6200 1400
+$Comp
+L Connector:TestPoint_Alt TP2
+U 1 1 5D617A06
+P 10500 1200
+F 0 "TP2" H 10558 1272 50  0000 L CNN
+F 1 "TestPoint_Alt" H 10558 1227 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Keystone_5000-5004_Miniature" H 10700 1200 50  0001 C CNN
+F 3 "~" H 10700 1200 50  0001 C CNN
+	1    10500 1200
+	1    0    0    -1  
+$EndComp
+Connection ~ 10500 1200
+Wire Wire Line
+	10500 1200 10750 1200
 $EndSCHEMATC
