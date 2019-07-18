@@ -22,6 +22,7 @@ F 0 "J9" H 1907 1617 50  0000 C CNN
 F 1 "Barrel_Jack_Switch" H 1907 1526 50  0000 C CNN
 F 2 "Connect:BARREL_JACK" H 1900 1260 50  0001 C CNN
 F 3 "~" H 1900 1260 50  0001 C CNN
+F 4 "PJ-002AH " H 1850 1300 50  0001 C CNN "PN"
 	1    1850 1300
 	1    0    0    -1  
 $EndComp
@@ -272,8 +273,8 @@ Wire Wire Line
 Wire Wire Line
 	8450 1400 8450 1500
 Connection ~ 8200 1400
-Text Notes 8850 2000 0    50   ~ 0
-higher resistance = lower voltage\n
+Text Notes 7650 2000 0    50   ~ 0
+higher resistance \n= lower voltage\n
 $Comp
 L Device:R_POT_US R11
 U 1 1 5D35B4CF
@@ -300,7 +301,7 @@ Connection ~ 8450 1800
 Wire Wire Line
 	8450 1800 8450 1850
 Wire Wire Line
-	8450 1400 9300 1400
+	8450 1400 9000 1400
 Connection ~ 8450 1400
 Text GLabel 9300 1400 2    50   Input ~ 0
 V_HV
@@ -312,7 +313,7 @@ Connection ~ 8450 2200
 Wire Wire Line
 	8450 2200 8450 2250
 Wire Wire Line
-	8450 3050 8450 3200
+	8450 3050 8450 3100
 Text Notes 8200 1850 0    50   ~ 0
 ccw
 Text Notes 8200 2150 0    50   ~ 0
@@ -337,11 +338,7 @@ $EndComp
 NoConn ~ 1450 2850
 NoConn ~ 2550 2950
 Wire Notes Line
-	3600 3600 11050 3600
-Wire Notes Line
 	3600 500  3600 3600
-Wire Bus Line
-	3550 3600 500  3600
 $Comp
 L power:+12V #PWR0145
 U 1 1 5D312AF4
@@ -422,4 +419,32 @@ Connection ~ 2700 2850
 Wire Wire Line
 	2850 3050 2600 3050
 Connection ~ 2600 3050
+Wire Notes Line
+	500  3600 11050 3600
+Text Notes 3150 3550 0    50   ~ 0
+5v supply\n
+$Comp
+L Device:CP1_Small C?
+U 1 1 5D51C6E4
+P 9000 1700
+F 0 "C?" H 9091 1746 50  0000 L CNN
+F 1 "1uf 450v" H 9091 1655 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 9000 1700 50  0001 C CNN
+F 3 "~" H 9000 1700 50  0001 C CNN
+F 4 "UPW2W010MPD " H 9000 1700 50  0001 C CNN "PN"
+	1    9000 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 1600 9000 1400
+Connection ~ 9000 1400
+Wire Wire Line
+	9000 1400 9300 1400
+Wire Wire Line
+	9000 1800 9000 3100
+Wire Wire Line
+	9000 3100 8450 3100
+Connection ~ 8450 3100
+Wire Wire Line
+	8450 3100 8450 3200
 $EndSCHEMATC

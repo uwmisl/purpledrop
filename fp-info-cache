@@ -1,4 +1,11 @@
-15987672609248341
+15992362807602366
+1825232-1
+1825232-1
+
+
+0
+5
+5
 A03P12
 A03P-12
 
@@ -61754,6 +61761,13 @@ TO-264-5 Vertical RM 3.81mm
 5
 5
 PD_footprint
+C_J_5035mm
+Capacitor SMD 2010 (5025 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator
+capacitor
+0
+2
+2
+PD_footprint
 PQFP-80
 PQFP80 14x20 / QIP80E CASE 122BS (see ON Semiconductor 122BS.PDF)
 QFP 0.8
@@ -66695,6 +66709,13 @@ Logo WEEE
 0
 0
 0
+TECON
+1825232-1
+
+
+0
+5
+4
 TerminalBlock
 TerminalBlock_Altech_AK300-2_P5.00mm
 Altech AK300 terminal block, pitch 5.0mm, 45 degree angled, see http://www.mouser.com/ds/2/16/PCBMETRC-24178.pdf

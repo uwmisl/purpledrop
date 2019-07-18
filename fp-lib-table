@@ -4,4 +4,5 @@
   (lib (name A03P12)(type KiCad)(uri ${KIPRJMOD}/footprints/A03P12.pretty)(options "")(descr ""))
   (lib (name CUI)(type KiCad)(uri ${KIPRJMOD}/footprints/CUI.pretty)(options "")(descr ""))
   (lib (name logos)(type KiCad)(uri ${KIPRJMOD}/footprints/logos.pretty)(options "")(descr ""))
+  (lib (name TECON)(type KiCad)(uri ${KIPRJMOD}/footprints/TECON.pretty)(options "")(descr ""))
 )
