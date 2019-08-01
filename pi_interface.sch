@@ -33,6 +33,7 @@ F 0 "J3" H 1750 2817 50  0000 C CNN
 F 1 "Conn_02x20_Odd_Even" H 1750 2726 50  0000 C CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical" H 1700 1700 50  0001 C CNN
 F 3 "~" H 1700 1700 50  0001 C CNN
+F 4 "ESQ-120-34-T-D " H 1700 1700 50  0001 C CNN "PN"
 	1    1700 1700
 	1    0    0    -1  
 $EndComp

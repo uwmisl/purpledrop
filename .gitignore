@@ -8,6 +8,7 @@ _autosave-*
 *.tmp
 *-cache.lib 
 *-cache
+
 #check in rescue because i had to rescue some
 #eventually i'll fix that
 #*-rescue.lib
@@ -24,6 +25,11 @@ _autosave-*
 # Exported BOM files
 *.xml
 *.csv
+*.xlsx
+*.xls
+
+#exported 3d files
+*.step
 
 # gerbers
 gerbers
