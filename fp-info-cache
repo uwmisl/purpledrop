@@ -1,4 +1,11 @@
-15975174705081717
+15989236010917059
+A03P12
+A03P-12
+
+
+0
+5
+5
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -42244,6 +42251,13 @@ SMD SMT ceramic resonator filter filter hand-soldering
 0
 3
 3
+CUI
+PDQE15Q24S5D
+PDQE15-Q24-S5-D-1
+Power Supply
+0
+6
+6
 Diode_SMD
 Diode_Bridge_Diotec_ABS
 SMD diode bridge ABS (Diotec), see https://diotec.com/tl_files/diotec/files/pdf/datasheets/abs2.pdf
@@ -49083,6 +49097,27 @@ Yellow 5381 Series LED
 0
 2
 2
+logos
+misl-logo
+
+
+0
+0
+0
+logos
+purpledrop
+
+
+0
+0
+0
+logos
+wlogo
+
+
+0
+0
+0
 Module
 A20_OLINUXINO_LIME2
 A20 Olinuxino LIME2, 1.2GHz, 512-1024MB RAM, Micro-SD, NAND or eMMC, 1000Mbit Ethernet
@@ -61718,6 +61753,20 @@ TO-264-5 Vertical RM 3.81mm
 0
 5
 5
+PD_footprint
+PQFP-80
+PQFP80 14x20 / QIP80E CASE 122BS (see ON Semiconductor 122BS.PDF)
+QFP 0.8
+0
+80
+80
+PD_footprint
+SOT-89-3
+SOT-89-3
+SOT-89-3
+0
+4
+3
 Potentiometer_SMD
 Potentiometer_ACP_CA6-VSMD_Vertical
 Potentiometer, vertical, ACP CA6-VSMD, http://www.acptechnologies.com/wp-content/uploads/2017/06/01-ACP-CA6.pdf
@@ -65260,6 +65309,13 @@ rotary encoder
 0
 5
 4
+SAMTEC_conn
+SAMTEC-FTS-132-03-X-DV
+translated Allegro footprint
+
+0
+64
+64
 Sensor
 Aosong_DHT11_5.5x12.0_P2.54mm
 Temperature and humidity module, http://akizukidenshi.com/download/ds/aosong/DHT11.pdf
@@ -66639,6 +66695,13 @@ Logo WEEE
 0
 0
 0
+TECON
+1825232-1
+
+
+0
+5
+4
 TerminalBlock
 TerminalBlock_Altech_AK300-2_P5.00mm
 Altech AK300 terminal block, pitch 5.0mm, 45 degree angled, see http://www.mouser.com/ds/2/16/PCBMETRC-24178.pdf
