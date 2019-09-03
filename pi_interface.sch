@@ -762,4 +762,16 @@ Wire Wire Line
 	6600 1400 6600 1500
 Wire Wire Line
 	6750 1750 6750 1800
+Text Label 1200 900  0    50   ~ 0
+SDA
+Text Label 1200 1000 0    50   ~ 0
+SCL
+Wire Wire Line
+	1050 900  1500 900 
+Wire Wire Line
+	1050 1000 1500 1000
+Text GLabel 1050 900  0    50   Input ~ 0
+SDA
+Text GLabel 1050 1000 0    50   Input ~ 0
+SCL
 $EndSCHEMATC

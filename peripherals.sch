@@ -1264,4 +1264,8 @@ Wire Wire Line
 	1250 2000 1250 2050
 Wire Wire Line
 	1250 2350 1250 2450
+Text GLabel 5550 4850 0    50   Input ~ 0
+SCL
+Text GLabel 5550 4950 0    50   Input ~ 0
+SDA
 $EndSCHEMATC
