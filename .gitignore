@@ -7,7 +7,7 @@
 *~
 _autosave-*
 *.tmp
-*-cache.lib 
+*-cache.lib
 *-cache
 
 #check in rescue because i had to rescue some
@@ -36,3 +36,6 @@ _autosave-*
 gerbers
 
 .DS_Store
+
+# rust stuff
+/target/
