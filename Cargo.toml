@@ -1,18 +1,9 @@
-[package]
-name = "purpledrop"
-version = "0.1.0"
-authors = ["Max Willsey <me@mwillsey.com>"]
-edition = "2018"
+[workspace]
 
-[dependencies]
-rppal = "0.11.2"
-structopt = "0.3.5"
-log = "0.4.6"
-env_logger = "0.7"
-signal-hook = "0.1.9"
+members = [
+    "purpledrop",
+    "devices",
+]
 
-serde = { version = "1", features = ["derive"] }
-toml = "0.5"
-
-[build-dependencies]
-chrono = "0.4"
+[profile.release]
+debug = true

@@ -1,6 +1,7 @@
 use serde::{
     de::{self, Deserializer},
     Deserialize,
+    Serialize,
 };
 
 use std::fmt;
@@ -10,12 +11,12 @@ use std::str::FromStr;
 
 use crate::location::Location;
 
-#[derive(Debug, Deserialize)]
+#[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct Board {
     pub layout: Layout,
 }
 
-#[derive(Debug, PartialEq)]
+#[derive(Clone, Debug, Serialize, PartialEq)]
 pub struct Layout {
     pins: Vec<Vec<Option<usize>>>,
 }

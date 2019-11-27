@@ -1,20 +1,4 @@
-use std::path::Path;
-
-type BoxedStdError = Box<dyn std::error::Error>;
-type StdResult<T, E = BoxedStdError> = std::result::Result<T, E>;
-
-use log::*;
-use serde::Deserialize;
-
-pub mod board;
-pub mod devices;
-mod error;
-pub mod location;
-
-pub use error::{Error, Result};
-use location::{Location, Rectangle};
-
-#[derive(Debug, Deserialize)]
+[derive(Debug, Deserialize)]
 pub struct Settings {
     pub board: board::Board,
     pub hv507: devices::hv507::Settings,
@@ -51,6 +35,10 @@ impl PurpleDrop {
         trace!("Initialized purpledrop!");
 
         Ok(pd)
+    }
+
+    pub fn n_pins() -> usize {
+        128
     }
 
     // pub fn heat(
