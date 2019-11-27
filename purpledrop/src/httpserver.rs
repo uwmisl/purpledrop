@@ -6,10 +6,7 @@ use jsonrpc_http_server::{
     RequestMiddlewareAction, ServerBuilder,
 };
 
-#[cfg(target_arch="arm")]
-use devices::purpledrop::Settings;
-#[cfg(not(target_arch="arm"))]
-use crate::mockpurpledrop::MockSettings as Settings;
+use crate::purpledrop::Settings;
 
 use hyper_staticfile::Static;
 use structopt::StructOpt;

@@ -5,7 +5,7 @@ use log::*;
 use rppal::spi::Spi;
 use serde::Deserialize;
 
-use crate::Result;
+use crate::error::Result;
 
 // From Table 1
 #[allow(dead_code)]

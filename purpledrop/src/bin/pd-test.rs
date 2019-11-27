@@ -5,7 +5,7 @@ use log::*;
 
 use purpledrop::{
     location::{yx, Location, Rectangle},
-    PurpleDrop, Settings,
+    purpledrop::{PurpleDrop, Settings}
 };
 
 #[derive(Debug, Clone, Copy)]
@@ -274,7 +274,7 @@ fn parse_hex(src: &str) -> Result<u128, std::num::ParseIntError> {
 
 #[derive(Debug, StructOpt)]
 struct ToggleMask {
-    #[structopt(parse(try_from_str = parse_hex), help = "in hex, but no 0x prefix")]
+    #[structopt(parse(try_from_str = parse_hex), help="in hex, but no 0x prefix")]
     mask: u128,
     #[structopt(long, default_value = "1.0")]
     delay: MyDuration,

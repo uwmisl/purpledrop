@@ -2,14 +2,8 @@ use std::sync::{Arc, Mutex};
 use jsonrpc_core::{Error, ErrorCode};
 use jsonrpc_derive::rpc;
 
-#[cfg(target_arch="arm")]
-use devices::purpledrop::PurpleDrop;
-#[cfg(not(target_arch="arm"))]
-use crate::mockpurpledrop::MockPurpleDrop as PurpleDrop;
-#[cfg(target_arch="arm")]
-use devices::purpledrop::Settings;
-#[cfg(not(target_arch="arm"))]
-use crate::mockpurpledrop::MockSettings as Settings;
+use crate::purpledrop::PurpleDrop;
+use crate::purpledrop::Settings;
 
 use crate::board::Board;
 
@@ -35,12 +29,14 @@ impl From<RpcError> for Error {
 }
 
 pub struct PurpleDropRpc {
-    purpledrop: Arc<Mutex<PurpleDrop>>
+    purpledrop: Arc<Mutex<PurpleDrop>>,
 }
 
 impl PurpleDropRpc { 
     pub fn new(settings: Settings) -> Result<PurpleDropRpc> {
-        let new_rpc = PurpleDropRpc{ purpledrop: Arc::new(Mutex::new(PurpleDrop::new(settings)?)) };
+        let new_rpc = PurpleDropRpc{ 
+            purpledrop: Arc::new(Mutex::new(PurpleDrop::new(settings)?)),
+         };
         Ok(new_rpc)
     }
 }

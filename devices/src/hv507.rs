@@ -6,7 +6,7 @@ use serde::Deserialize;
 use rppal::gpio::{Gpio, Level, OutputPin, Pin};
 use rppal::pwm::{self, Pwm};
 
-use crate::{Error, Result};
+use crate::error::{Error, Result};
 
 const N_PINS: usize = 128;
 
