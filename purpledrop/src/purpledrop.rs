@@ -4,7 +4,7 @@ mod target {
     use std::path::Path;
     use serde::Deserialize;
     use log::*;
-    use crate::error::{Error, Result};
+    use crate::error::Result;
     use crate::location::{Location, Rectangle};
     type BoxedStdError = Box<dyn std::error::Error>;
     type StdResult<T, E = BoxedStdError> = std::result::Result<T, E>;
@@ -48,8 +48,19 @@ mod target {
             Ok(pd)
         }
 
+        /// Returns the number of electrodes supported by purple drop hardware
         pub fn n_pins() -> usize {
             128
+        }
+
+        /// Set the electrode drive frequency
+        ///
+        /// # Arguments
+        ///
+        /// * `f` - Floating point frequency in Hz
+        pub fn set_frequency(&mut self, f: f64) -> Result<()>{
+            self.hv507.set_polarity(f)?;
+            Ok(())
         }
 
         // pub fn heat(

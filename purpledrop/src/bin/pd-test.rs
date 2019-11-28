@@ -32,7 +32,7 @@ type SleepFn = dyn Fn(MyDuration) -> RunResult<()>;
 #[structopt(rename_all = "kebab-case")]
 #[structopt(about = r#"env!("PD_TEST_ABOUT")"#)]
 enum SubCommand {
-    SetPolarity(SetPolarity),
+    SetFrequency(SetFrequency),
     SetPin(SetPin),
     SetLoc(SetLoc),
     Circle(Circle),
@@ -91,7 +91,7 @@ fn main() -> RunResult<()> {
 
     use SubCommand::*;
     match sub {
-        SetPolarity(x) => x.run(&mut pd, &sleep),
+        SetFrequency(x) => x.run(&mut pd, &sleep),
         SetPin(x) => x.run(&mut pd, &sleep),
         SetLoc(x) => x.run(&mut pd, &sleep),
         Circle(x) => x.run(&mut pd, &sleep),
@@ -101,15 +101,14 @@ fn main() -> RunResult<()> {
 }
 
 #[derive(Debug, StructOpt)]
-struct SetPolarity {
+struct SetFrequency {
     frequency: f64,
-    duty_cycle: f64,
     seconds: MyDuration,
 }
 
-impl SetPolarity {
+impl SetFrequency {
     fn run(&self, pd: &mut PurpleDrop, sleep: &SleepFn) -> RunResult<()> {
-        pd.hv507.set_polarity(self.frequency, self.duty_cycle)?;
+        pd.set_frequency(self.frequency)?;
         sleep(self.seconds)
     }
 }
@@ -123,13 +122,14 @@ struct SetPin {
 
 impl SetPin {
     fn run(&self, pd: &mut PurpleDrop, sleep: &SleepFn) -> RunResult<()> {
-        let n = pd.hv507.n_pins();
+        let n = PurpleDrop::n_pins();
         if self.pin >= n {
             let s = format!("Pin out of bounds! Should be between 0 and {}.", n);
             return Err(s.into());
         }
-        pd.hv507.set_pin_hi(self.pin);
-        pd.hv507.shift_and_latch();
+        let mut pins = vec![false; n];
+        pins[self.pin] = true;
+        pd.output_pins(&pins);
         sleep(self.seconds)
     }
 }
@@ -284,13 +284,14 @@ struct ToggleMask {
 
 impl ToggleMask {
     fn run(&self, pd: &mut PurpleDrop, sleep: &SleepFn) -> RunResult<()> {
+        let mut pins = vec![false; PurpleDrop::n_pins()];
         for i in 0..self.iterations {
             let flip = i & 1;
-            for pin in 0..128 {
+            for pin in 0..PurpleDrop::n_pins() {
                 let bit = (self.mask >> (127 - pin)) & 1;
-                pd.hv507.set_pin(pin, bit as usize == flip);
+                pins[pin] = bit as usize == flip;
             }
-            pd.hv507.shift_and_latch();
+            pd.output_pins(&pins);
             sleep(self.delay)?;
         }
         Ok(())

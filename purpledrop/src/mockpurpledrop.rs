@@ -1,7 +1,7 @@
 use std::path::Path;
 
 use crate::location::{Location, Rectangle};
-use crate::error::{Error, Result};
+use crate::error::{Result};
 use crate::board;
 
 use serde::Deserialize;
@@ -36,14 +36,19 @@ impl MockPurpleDrop {
         128
     }
 
+    pub fn set_frequency(&self, _f: f64) -> Result<()> {
+        //noop
+        Ok(())
+    }
+
     pub fn output_pins(&mut self, pins: &[bool]) {
         debug!("MockPurpleDrop::output_pins: {:?}", pins)
     }
 
-    pub fn output_locations(&mut self, locations: &[Location]) {
+    pub fn output_locations(&mut self, _locations: &[Location]) {
     }
 
-    pub fn output_rects(&mut self, rects: &[Rectangle]) {
+    pub fn output_rects(&mut self, _rects: &[Rectangle]) {
     }
 }
 
