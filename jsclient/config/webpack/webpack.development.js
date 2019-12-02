@@ -13,12 +13,8 @@ module.exports = {
         contentBase: paths.outputPath,
         port: 3000,
         proxy: {
-            //'/rpc': 'http://localhost:8000',
-            '/rpc': 'http://10.144.112.21:8000',
-        },
-        before: (app) => {
-            apiMocker(app, path.resolve('./mocker/index.js'), {
-            })
+            '/rpc': 'http://localhost:8000',
+            //'/rpc': 'http://10.144.112.21:8000',
         },
         open: true,
         /*overlay: {
