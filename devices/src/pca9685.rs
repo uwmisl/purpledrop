@@ -5,7 +5,7 @@ use log::*;
 use rppal::i2c::I2c;
 use serde::Deserialize;
 
-use crate::Result;
+use crate::error::Result;
 
 // https://cdn-shop.adafruit.com/datasheets/PCA9685.pdf
 #[allow(dead_code)]

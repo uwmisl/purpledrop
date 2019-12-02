@@ -2,7 +2,7 @@
 use rppal::i2c::I2c;
 use serde::Deserialize;
 
-use crate::Result;
+use crate::error::Result;
 
 // From Table 6.2
 enum Command {

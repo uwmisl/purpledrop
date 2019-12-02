@@ -6,7 +6,7 @@ use serde::Deserialize;
 use rppal::gpio::{Gpio, Level, OutputPin, Pin};
 use rppal::pwm::{self, Pwm};
 
-use crate::{Error, Result};
+use crate::error::{Error, Result};
 
 const N_PINS: usize = 128;
 
@@ -100,13 +100,26 @@ impl Hv507 {
         self.data.set_low();
 
         // now call the public function to set the HV507 polarity pin
-        self.set_polarity(settings.frequency, settings.duty_cycle)?;
+        self.set_polarity(settings.frequency)?;
 
         Ok(())
     }
-
-    pub fn set_polarity(&mut self, frequency: f64, duty_cycle: f64) -> Result<()> {
-        self.polarity.set_frequency(frequency, duty_cycle)?;
+    /// Set the frequency of the polarity pin
+    ///
+    /// If frequency is < 0.5, then the polarity pin will be left in the HIGH
+    /// state so that enabled electrodes are driven with high voltage DC, and
+    /// the top plate remains grounded.
+    pub fn set_polarity(&mut self, frequency: f64) -> Result<()> {
+        // The PWM driver appears to support up to 2^31 ns period, or ~0.5 Hz.
+        // When a frequency less than that is requested, we will set the duty
+        // cycle to 100%, to ensure that the output is always high.
+        if frequency >= 0.5 {
+            // 50% duty cycle square wave of desired frequency
+            self.polarity.set_frequency(frequency, 0.5)?;
+        } else {
+            // DC high output
+            self.polarity.set_frequency(0.5, 1.0)?;
+        }
         self.polarity.enable()?;
         Ok(())
     }
