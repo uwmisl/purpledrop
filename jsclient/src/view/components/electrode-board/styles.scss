@@ -1,0 +1,34 @@
+.electrode-grid-wrapper {
+    padding: 10px;
+    background: purple;
+    width: fit-content;
+}
+.electrode-grid {
+    width: 400px;
+    background: purple;
+
+}
+
+.toolbar {
+    margin: 5px;
+}
+.electrode {
+    stroke: gold;
+    fill: gold;
+    stroke-width: 0.1;
+}
+
+.electrode.active {
+    fill: red !important;
+}
+.electrode.hover {
+    fill: black !important;
+}
+
+button.brushsize {
+    font-size: larger;
+}
+input#brushsize {
+    width: 4em;
+    font-size: larger;
+}
