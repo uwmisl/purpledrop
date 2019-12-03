@@ -1,6 +1,6 @@
-use std::sync::{Arc, Mutex};
 use jsonrpc_core::{Error, ErrorCode};
 use jsonrpc_derive::rpc;
+use std::sync::{Arc, Mutex};
 
 use crate::purpledrop::PurpleDrop;
 use crate::purpledrop::Settings;
@@ -32,16 +32,16 @@ pub struct PurpleDropRpc {
     purpledrop: Arc<Mutex<PurpleDrop>>,
 }
 
-impl PurpleDropRpc { 
+impl PurpleDropRpc {
     pub fn new(settings: Settings) -> Result<PurpleDropRpc> {
-        let new_rpc = PurpleDropRpc{ 
+        let new_rpc = PurpleDropRpc {
             purpledrop: Arc::new(Mutex::new(PurpleDrop::new(settings)?)),
-         };
+        };
         Ok(new_rpc)
     }
 }
 
-#[rpc]
+#[rpc(server)]
 pub trait Rpc {
     #[rpc(name = "get_board_definition")]
     fn get_board_definition(&self) -> RpcResult<Board>;

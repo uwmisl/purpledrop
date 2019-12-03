@@ -2,8 +2,10 @@ use std::thread::sleep;
 use std::time::Duration;
 
 use log::*;
-use rppal::i2c::I2c;
 use serde::Deserialize;
+
+#[cfg(target_arch = "arm")]
+use rppal::i2c::I2c;
 
 use crate::error::Result;
 
@@ -61,6 +63,7 @@ pub struct Settings {
     pub address: u16,
 }
 
+#[cfg(target_arch = "arm")]
 impl Settings {
     pub fn make(&self) -> Result<Pca9685> {
         let mut i2c = rppal::i2c::I2c::with_bus(self.bus)?;
@@ -76,11 +79,13 @@ impl Settings {
     }
 }
 
+#[cfg(target_arch = "arm")]
 pub struct Pca9685 {
     initialized: bool,
     i2c: I2c,
 }
 
+#[cfg(target_arch = "arm")]
 impl Pca9685 {
     fn init(&mut self) -> Result<()> {
         self.write_reg(Register::Mode1, Mode1::AutoIncrement)?;
@@ -177,6 +182,7 @@ impl Pca9685 {
     }
 }
 
+#[cfg(target_arch = "arm")]
 impl Drop for Pca9685 {
     fn drop(&mut self) {
         if self.initialized {

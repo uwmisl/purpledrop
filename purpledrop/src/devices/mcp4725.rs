@@ -1,5 +1,7 @@
 // https://cdn-shop.adafruit.com/datasheets/mcp4725.pdf
+#[cfg(target_arch = "arm")]
 use rppal::i2c::I2c;
+
 use serde::Deserialize;
 
 use crate::error::Result;
@@ -16,6 +18,7 @@ pub struct Settings {
     pub address: u16,
 }
 
+#[cfg(target_arch = "arm")]
 impl Settings {
     pub fn make(&self) -> Result<Mcp4725> {
         let mut i2c = rppal::i2c::I2c::with_bus(self.bus)?;
@@ -29,10 +32,12 @@ impl Settings {
     }
 }
 
+#[cfg(target_arch = "arm")]
 pub struct Mcp4725 {
     i2c: I2c,
 }
 
+#[cfg(target_arch = "arm")]
 impl Mcp4725 {
     pub fn write(&mut self, data: u16) -> Result<()> {
         self.do_write(data, Command::WriteDac)

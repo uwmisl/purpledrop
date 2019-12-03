@@ -5,7 +5,7 @@ use log::*;
 
 use purpledrop::{
     location::{yx, Location, Rectangle},
-    purpledrop::{PurpleDrop, Settings}
+    purpledrop::{PurpleDrop, Settings},
 };
 
 #[derive(Debug, Clone, Copy)]

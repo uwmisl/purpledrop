@@ -3,8 +3,11 @@ use std::time::{Duration, Instant};
 use log::*;
 use serde::Deserialize;
 
-use rppal::gpio::{Gpio, Level, OutputPin, Pin};
-use rppal::pwm::{self, Pwm};
+#[cfg(target_arch = "arm")]
+use rppal::{
+    gpio::{Gpio, Level, OutputPin, Pin},
+    pwm::{self, Pwm},
+};
 
 use crate::error::{Error, Result};
 
@@ -34,6 +37,7 @@ pub enum DefaultLevel {
     High,
 }
 
+#[cfg(target_arch = "arm")]
 impl Settings {
     pub fn make(&self) -> Result<Hv507> {
         trace!("Initializing pi gpio...");
@@ -74,6 +78,7 @@ impl Settings {
     }
 }
 
+#[cfg(target_arch = "arm")]
 pub struct Hv507 {
     blank: OutputPin,
     latch_enable: OutputPin,
@@ -84,6 +89,7 @@ pub struct Hv507 {
     pins: [Level; N_PINS],
 }
 
+#[cfg(target_arch = "arm")]
 impl Hv507 {
     pub fn n_pins(&self) -> usize {
         self.pins.len()
@@ -170,6 +176,7 @@ fn spin(duration: Duration) {
     while start.elapsed() < duration {}
 }
 
+#[cfg(target_arch = "arm")]
 impl Drop for Hv507 {
     fn drop(&mut self) {
         debug!("Cleaning up HV507");

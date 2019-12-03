@@ -13,7 +13,7 @@ use structopt::StructOpt;
 
 use futures::Future;
 
-use crate::purpledrop_rpc::{Rpc, PurpleDropRpc};
+use crate::purpledrop_rpc::{PurpleDropRpc, Rpc};
 
 use log::*;
 
@@ -87,7 +87,7 @@ impl Server {
 
         let settings = Settings::from_file(&self.config_file)?;
         debug!("Settings made!");
-        
+
         let purpledrop = PurpleDropRpc::new(settings)?;
 
         debug!("PurpleDrop created.");

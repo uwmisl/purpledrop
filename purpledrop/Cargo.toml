@@ -16,11 +16,10 @@ serde_yaml = "0.8.9"
 toml = "0.5"
 jsonrpc-core = "14"
 jsonrpc-derive = "14"
-jsonrpc-core-client = "14"
 jsonrpc-http-server = "14"
 
 [target.'cfg(target_arch = "arm")'.dependencies]
-devices = {path = "../devices"}
+rppal = "0.11"
 
 [build-dependencies]
 chrono = "0.4"

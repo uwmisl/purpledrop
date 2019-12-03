@@ -1,12 +1,11 @@
 use serde::{
     de::{self, Deserializer},
-    Deserialize,
-    Serialize,
+    Deserialize, Serialize,
 };
 
+use std::convert::TryInto;
 use std::fmt;
 use std::num::ParseIntError;
-use std::convert::TryInto;
 use std::str::FromStr;
 
 use crate::location::Location;

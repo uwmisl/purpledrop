@@ -2,8 +2,10 @@
 // https://datasheets.maximintegrated.com/en/ds/MAX31865.pdf
 
 use log::*;
-use rppal::spi::Spi;
 use serde::Deserialize;
+
+#[cfg(target_arch = "arm")]
+use rppal::spi::Spi;
 
 use crate::error::Result;
 
@@ -70,6 +72,7 @@ pub struct Settings {
     pub resist_zero: f32,
 }
 
+#[cfg(target_arch = "arm")]
 impl Settings {
     pub fn make(&self) -> Result<Max31865> {
         assert!(LOW_THRESHOLD < HIGH_THRESHOLD);
@@ -108,6 +111,7 @@ impl Settings {
     }
 }
 
+#[cfg(target_arch = "arm")]
 pub struct Max31865 {
     spi: Spi,
     n_samples: u32,
@@ -115,6 +119,7 @@ pub struct Max31865 {
     resist_zero: f32,
 }
 
+#[cfg(target_arch = "arm")]
 impl Max31865 {
     fn initalize(&mut self) -> Result<()> {
         // first write out the config bits
