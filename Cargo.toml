@@ -5,5 +5,11 @@ members = [
     "devices",
 ]
 
+serde = { version = "1", features = ["derive"] }
+toml = "0.5"
+
+[build-dependencies]
+chrono = "0.4"
+
 [profile.release]
 debug = true
