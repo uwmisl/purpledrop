@@ -19,13 +19,13 @@ use log::*;
 
 #[derive(StructOpt, Debug)]
 pub struct Server {
-    #[structopt(long = "address", default_value = "127.0.0.1:8000")]
+    #[structopt(long = "address", default_value = "0.0.0.0:80")]
     address: std::net::SocketAddr,
-    #[structopt(long = "threads", default_value = "2")]
+    #[structopt(long = "threads", default_value = "4")]
     threads: usize,
-    #[structopt(long = "static", default_value = "static")]
+    #[structopt(long = "static", default_value = "/usr/share/purpledrop/webroot")]
     static_dir: String,
-    #[structopt(long = "config")]
+    #[structopt(long = "config", default_value = "/etc/purpledrop/default.toml")]
     config_file: String,
 }
 
