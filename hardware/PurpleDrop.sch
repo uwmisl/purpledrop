@@ -1,14 +1,13 @@
 EESchema Schematic File Version 4
-LIBS:PurpleDrop-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 5
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "PurpleDrop Main Board"
+Date "2020-04-10"
+Rev "6"
+Comp "UW MISL"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -19,12 +18,6 @@ S 5000 1200 1150 1800
 U 5D31F1CA
 F0 "HV interface" 50
 F1 "HV_interface.sch" 50
-$EndSheet
-$Sheet
-S 2900 1250 1050 1750
-U 5D31F2B8
-F0 "pi interface" 50
-F1 "pi_interface.sch" 50
 $EndSheet
 $Sheet
 S 2900 3600 1150 1550
@@ -165,4 +158,10 @@ F 3 "" H 9750 5500 50  0001 C CNN
 	1    9750 5500
 	1    0    0    -1  
 $EndComp
+$Sheet
+S 3000 1300 1050 1350
+U 5E77DDA4
+F0 "MCU" 50
+F1 "MCU.sch" 50
+$EndSheet
 $EndSCHEMATC

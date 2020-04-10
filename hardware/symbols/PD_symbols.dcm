@@ -1,0 +1,19 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 5V_ISO
+D Power symbol creates a global label with name "VDD"
+K power-flag
+$ENDCMP
+#
+$CMP SW_Push_4pin_12common
+D Push button switch, generic, four pins
+K switch normally-open pushbutton push-button
+F ~
+$ENDCMP
+#
+$CMP V_HV
+D Power symbol creates a global label with name "V_HV"
+K power-flag
+$ENDCMP
+#
+#End Doc Library
