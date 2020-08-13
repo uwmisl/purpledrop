@@ -1,7 +1,11 @@
 # PurpleDrop
 
-This holds the hardware design for PurpleDrop, a digital microfluidic device. The hardware is designed in KiCad, and consists of a main driver board, and a "cartridge" board containing the electrode array. 
+This holds the hardware design for PurpleDrop, a digital microfluidic device. The hardware is designed in KiCad, and consists of a [main driver board](/hardware), and a ["cartridge" board](/cartridge) containing the electrode array. 
 
-## BOM Generation
+# Documentation
 
-The [KiBom](https://github.com/SchrodingersGat/KiBoM) plugin is used to generate a BOM file, based on settings in `bom.ini`.
+See the [wiki for PurpleDrop documentation](https://github.com/uwmisl/purpledrop/wiki). 
+
+# Embedded Software
+
+This design contains an STM32F413 microcontroller. The software that runs it can be found at [https://github.com/uwmisl/purpledrop-stm32]().
