@@ -5,6 +5,12 @@ D Power symbol creates a global label with name "VDD"
 K power-flag
 $ENDCMP
 #
+$CMP LM4041L
+D Precision Micropower Shunt Voltage Reference, TO-92
+K diode device voltage reference shunt
+F http://www.ti.com/lit/ds/symlink/lm4041-n.pdf
+$ENDCMP
+#
 $CMP SW_Push_4pin_12common
 D Push button switch, generic, four pins
 K switch normally-open pushbutton push-button
