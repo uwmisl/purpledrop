@@ -472,7 +472,7 @@ U 1 1 5E7AE415
 P 5650 3450
 F 0 "U17" H 6100 5100 50  0000 C CNN
 F 1 "STM32F413RGTx" H 6200 1650 50  0000 C CNN
-F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 5050 1750 50  0001 R CNN
+F 2 "PD_footprint:LQFP-64_10x10mm_P0.5mm_custom" H 5050 1750 50  0001 R CNN
 F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00282249.pdf" H 5650 3450 50  0001 C CNN
 F 4 "STM32F413RGT6" H 5650 3450 50  0001 C CNN "PN"
 F 5 "497-17011-ND" H 5650 3450 50  0001 C CNN "Digikey PN"
