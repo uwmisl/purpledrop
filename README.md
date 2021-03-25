@@ -1,18 +1,50 @@
 # PurpleDrop
 
-This holds the hardware design for PurpleDrop, a digital microfluidic device. The hardware is designed in KiCad, and consists of a [main driver board](/hardware), and a ["cartridge" board](/cartridge) containing the electrode array. 
+This holds the main board electronics design for [PurpleDrop](https://misl.cs.washington.edu/projects/fluidics.html),
+a digital microfluidic device. The design is done in KiCad v5.x.
 
 PurpleDrop is open-source, and you are welcome to build it as-is, or use it as a 
 starting point for your own projects. If you are thinking about building your 
-own PurpleDrop, please feel free to reach out first. This project is under active
-development, and there may be some recent updates not yet reflected here worth 
-considering. This repository is maintained by Jeff McBride, who can be reached at
-mcbridej@cs.washington.edu.
+own PurpleDrop, you are encouraged to reach out first. This project is under active
+development, and there may be some recent updates or issues not yet reflected here
+that you should consider. This repository is maintained by Jeff McBride, who can be
+reached at mcbridej@cs.washington.edu.
 
-# Documentation
+The latest release of PurpleDrop is v6.0, but this board has some design flaws that
+require re-work to work-around. Building this version is not recommended. These issues
+are fixed in v6.1, but this board has not been fully tested yet and so has not been
+released.
 
-See the [wiki for PurpleDrop documentation](https://github.com/uwmisl/purpledrop/wiki). 
+# PurpleDrop System Documentation
+
+For higher level documentation on the PurpleDrop, see the [wiki](https://github.com/uwmisl/purpledrop/wiki).
+
+# PC Design Documentation
+
+Schematic print: [PurpleDrop_rev6.1_schematic.pdf](hardware/output/PurpleDrop_rev6.1_schematic.pdf)
+
+Fab drawing: [PurpleDrop_rev6.1_fab.pfd](hardware/output/PurpleDrop_rev6.1_fab.pdf)
+
+![Front View](hardware/output/front_render.png)
+![Back View](hardware/output/back_render.png)
 
 # Embedded Software
 
 This design contains an STM32F413 microcontroller. The software that runs it can be found at [https://github.com/uwmisl/purpledrop-stm32]().
+
+# Development Notes
+
+Tips for working on this project
+## BOM Generation
+
+The [KiBom](https://github.com/SchrodingersGat/KiBoM) plugin is used to generate a BOM file, based on settings in `bom.ini`.
+
+To re-generate the BOM output:
+
+First, install kibom: `pip install kibom`. 
+
+Add a new BOM plugin in the "Generate BOM" dialog in eeschema, and configure it
+with this command line: 
+`python -m kibom "%I" "%O.csv"`
+
+Run the BOM plugin.
