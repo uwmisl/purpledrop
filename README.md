@@ -10,7 +10,7 @@ development, and there may be some recent updates or issues not yet reflected he
 that you should consider. This repository is maintained by Jeff McBride, who can be
 reached at mcbridej@cs.washington.edu.
 
-The latest release of PurpleDrop is v6.1. See [](ChangeLog.md]) for history.
+The latest release of PurpleDrop is v6.1. See [ChangeLog.md](ChangeLog.md) for history.
 
 # PurpleDrop System Documentation
 
