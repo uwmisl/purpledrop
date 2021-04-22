@@ -14,7 +14,7 @@ The latest release of PurpleDrop is v6.1. See [](ChangeLog.md]) for history.
 
 # PurpleDrop System Documentation
 
-For higher level documentation on the PurpleDrop, see the [wiki](https://github.com/uwmisl/purpledrop/wiki).
+For more information, including instructions on building and using a PurpleDrop, see the [PurpleDrop Manual](https://purpledrop.readthedocs.io)
 
 # PCB Design Documentation
 
