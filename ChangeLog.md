@@ -1,3 +1,14 @@
+# Rev 6.2 (Aug 2021)
+
+Updated for current parts availability. 
+
+- Switches MCU from STM32F13 to ATSAMG55
+- Adds negative supply rail for current sensing op-amp
+- Changes PWM driver from PCA9685 to PCA9532
+- Adds current sense input to MCU ADC
+- Makes several other functionally equivalent parts changes, that should be
+  transparent to software.
+
 # Rev 6.1 (Nov 2020)
 
 Functionally equivalent to rev 6, but fixes several issues with the rev 6 design.
