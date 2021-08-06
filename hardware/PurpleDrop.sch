@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 5
 Title "PurpleDrop Main Board"
-Date "2020-11-03"
-Rev "6.1"
+Date "2021-08-04"
+Rev "6.2"
 Comp "UW MISL"
 Comment1 ""
 Comment2 ""
@@ -45,6 +45,7 @@ F 0 "H1" H 8400 4696 50  0000 L CNN
 F 1 "MountingHole" H 8400 4605 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580" H 8300 4650 50  0001 C CNN
 F 3 "~" H 8300 4650 50  0001 C CNN
+F 4 "DNP" H 8300 4650 50  0001 C CNN "Config"
 	1    8300 4650
 	1    0    0    -1  
 $EndComp
@@ -56,6 +57,7 @@ F 0 "H2" H 8400 4896 50  0000 L CNN
 F 1 "MountingHole" H 8400 4805 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580" H 8300 4850 50  0001 C CNN
 F 3 "~" H 8300 4850 50  0001 C CNN
+F 4 "DNP" H 8300 4850 50  0001 C CNN "Config"
 	1    8300 4850
 	1    0    0    -1  
 $EndComp
@@ -67,6 +69,7 @@ F 0 "H3" H 8400 5096 50  0000 L CNN
 F 1 "MountingHole" H 8400 5005 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580" H 8300 5050 50  0001 C CNN
 F 3 "~" H 8300 5050 50  0001 C CNN
+F 4 "DNP" H 8300 5050 50  0001 C CNN "Config"
 	1    8300 5050
 	1    0    0    -1  
 $EndComp
@@ -78,6 +81,7 @@ F 0 "H4" H 8400 5296 50  0000 L CNN
 F 1 "MountingHole" H 8400 5205 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580" H 8300 5250 50  0001 C CNN
 F 3 "~" H 8300 5250 50  0001 C CNN
+F 4 "DNP" H 8300 5250 50  0001 C CNN "Config"
 	1    8300 5250
 	1    0    0    -1  
 $EndComp
@@ -89,6 +93,7 @@ F 0 "H5" H 8400 5496 50  0000 L CNN
 F 1 "MountingHole" H 8400 5405 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580" H 8300 5450 50  0001 C CNN
 F 3 "~" H 8300 5450 50  0001 C CNN
+F 4 "DNP" H 8300 5450 50  0001 C CNN "Config"
 	1    8300 5450
 	1    0    0    -1  
 $EndComp
@@ -100,6 +105,7 @@ F 0 "H6" H 8400 5696 50  0000 L CNN
 F 1 "MountingHole" H 8400 5605 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580" H 8300 5650 50  0001 C CNN
 F 3 "~" H 8300 5650 50  0001 C CNN
+F 4 "DNP" H 8300 5650 50  0001 C CNN "Config"
 	1    8300 5650
 	1    0    0    -1  
 $EndComp
@@ -111,6 +117,7 @@ F 0 "H7" H 8400 5896 50  0000 L CNN
 F 1 "MountingHole" H 8400 5805 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580" H 8300 5850 50  0001 C CNN
 F 3 "~" H 8300 5850 50  0001 C CNN
+F 4 "DNP" H 8300 5850 50  0001 C CNN "Config"
 	1    8300 5850
 	1    0    0    -1  
 $EndComp
@@ -122,6 +129,7 @@ F 0 "H8" H 8400 6096 50  0000 L CNN
 F 1 "MountingHole" H 8400 6005 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580" H 8300 6050 50  0001 C CNN
 F 3 "~" H 8300 6050 50  0001 C CNN
+F 4 "DNP" H 8300 6050 50  0001 C CNN "Config"
 	1    8300 6050
 	1    0    0    -1  
 $EndComp
@@ -133,6 +141,7 @@ F 0 "G1" H 9898 4906 50  0000 L CNN
 F 1 "W logo" H 9898 4815 50  0000 L CNN
 F 2 "logos:wlogo" H 9750 4800 50  0001 C CNN
 F 3 "" H 9750 4800 50  0001 C CNN
+F 4 "DNP" H 9750 4800 50  0001 C CNN "Config"
 	1    9750 4800
 	1    0    0    -1  
 $EndComp
@@ -144,6 +153,7 @@ F 0 "G2" H 9898 5256 50  0000 L CNN
 F 1 "MISL logo" H 9898 5165 50  0000 L CNN
 F 2 "logos:misl-logo" H 9750 5150 50  0001 C CNN
 F 3 "" H 9750 5150 50  0001 C CNN
+F 4 "DNP" H 9750 5150 50  0001 C CNN "Config"
 	1    9750 5150
 	1    0    0    -1  
 $EndComp
@@ -155,6 +165,7 @@ F 0 "G3" H 9898 5606 50  0000 L CNN
 F 1 "PurpleDrop logo" H 9898 5515 50  0000 L CNN
 F 2 "logos:purpledrop" H 9750 5500 50  0001 C CNN
 F 3 "" H 9750 5500 50  0001 C CNN
+F 4 "DNP" H 9750 5500 50  0001 C CNN "Config"
 	1    9750 5500
 	1    0    0    -1  
 $EndComp
