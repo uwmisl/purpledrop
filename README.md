@@ -10,7 +10,7 @@ development, and there may be some recent updates or issues not yet reflected he
 that you should consider. This repository is maintained by Jeff McBride, who can be
 reached at mcbridej@cs.washington.edu.
 
-The latest release of PurpleDrop is v6.1. See [](ChangeLog.md]) for history.
+The latest release of PurpleDrop is v6.2. See [](ChangeLog.md]) for history. 
 
 # PurpleDrop System Documentation
 
@@ -18,22 +18,23 @@ For more information, including instructions on building and using a PurpleDrop,
 
 # PCB Design Documentation
 
-Schematic print: [PurpleDrop_rev6.1_schematic.pdf](hardware/output/PurpleDrop_rev6.1_schematic.pdf)
+Schematic print: [PurpleDrop_rev6.2_schematic.pdf](hardware/output/PurpleDrop_rev6.2_schematic.pdf)
 
-Fab drawing: [PurpleDrop_rev6.1_fab.pfd](hardware/output/PurpleDrop_rev6.1_fab.pdf)
+Fab drawing: [PurpleDrop_rev6.2_fab.pfd](hardware/output/PurpleDrop_rev6.2_fab.pdf)
 
-Bill of Materials: [PurpleDrop_ScrubbedBOM.csv](hardware/output/PurpleDrop_ScrubbedBOM.csv)
+Bill of Materials: [PurpleDrop_rev6.2_bom.csv](hardware/output/PurpleDrop_rev6.2_bom.csv)
 
 ![Front View](hardware/output/front_render.png)
 ![Back View](hardware/output/back_render.png)
 
 # Embedded Software
 
-This design contains an STM32F413 microcontroller. The software that runs it can be found at [https://github.com/uwmisl/purpledrop-stm32]().
+This design contains a microcontroller. The software that runs it can be found at [https://github.com/uwmisl/purpledrop-stm32]().
 
 # Development Notes
 
 Tips for working on this project
+
 ## BOM Generation
 
 The [KiBom](https://github.com/SchrodingersGat/KiBoM) plugin is used to generate a BOM file, based on settings in `bom.ini`.
