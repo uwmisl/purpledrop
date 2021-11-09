@@ -1,6 +1,15 @@
+# Rev 6.3 (Nov 2021)
+
+Bug fixes for rev 6.2:
+
+- Switch back to PCA9685
+- Correct swapped silk designators for R28/R29
+- Change C59 from 0.01uF to 0.1uF (VHV_TARGET_PWM filter)
+- Change R29 from 511ohm to 0 (Current integrator output filter)
+
 # Rev 6.2 (Aug 2021)
 
-Updated for current parts availability. 
+Updated for current parts availability.
 
 - Switches MCU from STM32F13 to ATSAMG55
 - Adds negative supply rail for current sensing op-amp

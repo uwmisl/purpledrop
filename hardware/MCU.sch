@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 5
 Title "PurpleDrop Main Board"
-Date "2021-08-04"
-Rev "6.2"
+Date "2021-11-09"
+Rev "6.3"
 Comp "UW MISL"
 Comment1 ""
 Comment2 ""
@@ -1282,21 +1282,6 @@ Wire Wire Line
 Connection ~ 1250 2600
 Connection ~ 1250 3400
 $Comp
-L Device:C_Small C59
-U 1 1 615410D1
-P 3250 1400
-F 0 "C59" H 3342 1446 50  0000 L CNN
-F 1 "0.01uF" H 3342 1355 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 3250 1400 50  0001 C CNN
-F 3 "~" H 3250 1400 50  0001 C CNN
-F 4 "" H 3250 1400 50  0001 C CNN "Description"
-F 5 "C0805V103KCRACTU" H 3250 1400 50  0001 C CNN "PN"
-F 6 "399-6466-1-ND‎" H 3250 1400 50  0001 C CNN "Digikey PN"
-F 7 "CAP CER 10000PF 500V X7R 0805" H 3250 1400 50  0001 C CNN "Part Description"
-	1    3250 1400
-	-1   0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR0133
 U 1 1 615BB3EF
 P 3250 1550
@@ -1915,4 +1900,19 @@ F 4 "DNP" H 3850 6750 50  0001 C CNN "Config"
 $EndComp
 Wire Wire Line
 	3550 6650 3550 7150
+$Comp
+L Device:C_Small C59
+U 1 1 61A898FF
+P 3250 1400
+F 0 "C59" H 3000 1450 50  0000 L CNN
+F 1 "0.1uF" H 2950 1350 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3250 1400 50  0001 C CNN
+F 3 "~" H 3250 1400 50  0001 C CNN
+F 4 "16V" H 3250 1400 50  0001 C CNN "Description"
+F 5 "CC0603KRX7R7BB104" H 3250 1400 50  0001 C CNN "PN"
+F 6 "311-1088-2-ND " H 3250 1400 50  0001 C CNN "Digikey PN"
+F 7 "CAP CER 0.1UF 16V X7R 0603" H 3250 1400 50  0001 C CNN "Part Description"
+	1    3250 1400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
