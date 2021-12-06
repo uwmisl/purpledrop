@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 5
 Title "PurpleDrop Main Board"
 Date "2021-11-09"
-Rev "6.3"
+Rev "6.4"
 Comp "UW MISL"
 Comment1 ""
 Comment2 ""

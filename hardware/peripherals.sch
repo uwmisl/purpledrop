@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 5
 Title "PurpleDrop Main Board"
-Date "2021-11-09"
-Rev "6.3"
+Date "2021-12-06"
+Rev "6.4"
 Comp "UW MISL"
 Comment1 ""
 Comment2 ""

@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 4 5
 Title "PurpleDrop Main Board"
 Date "2021-11-09"
-Rev "6.3"
+Rev "6.4"
 Comp "UW MISL"
 Comment1 ""
 Comment2 ""
@@ -22,7 +22,7 @@ F 1 "Barrel_Jack_Switch" H 5107 2076 50  0000 C CNN
 F 2 "Connect:BARREL_JACK" H 5100 1810 50  0001 C CNN
 F 3 "~" H 5100 1810 50  0001 C CNN
 F 4 "PJ-002AH " H 5050 1850 50  0001 C CNN "PN"
-F 5 "CP-002AHPJTR-ND" H 5050 1850 50  0001 C CNN "Digikey PN"
+F 5 "CP-002AH-ND" H 5050 1850 50  0001 C CNN "Digikey PN"
 F 6 "CONN PWR JACK 2X5.5MM SOLDER" H 5050 1850 50  0001 C CNN "Part Description"
 	1    5050 1850
 	1    0    0    -1  

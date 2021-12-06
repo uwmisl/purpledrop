@@ -10,7 +10,7 @@ development, and there may be some recent updates or issues not yet reflected he
 that you should consider. This repository is maintained by Jeff McBride, who can be
 reached at mcbridej@cs.washington.edu.
 
-The latest release of PurpleDrop is v6.3. See [](ChangeLog.md]) for history.
+The latest release of PurpleDrop is v6.4. See [](ChangeLog.md]) for history.
 
 # PurpleDrop System Documentation
 
@@ -18,11 +18,11 @@ For more information, including instructions on building and using a PurpleDrop,
 
 # PCB Design Documentation
 
-Schematic print: [PurpleDrop_rev6.3_schematic.pdf](hardware/output/PurpleDrop_rev6.3_schematic.pdf)
+Schematic print: [PurpleDrop_rev6.4_schematic.pdf](hardware/output/PurpleDrop_rev6.4_schematic.pdf)
 
-Fab drawing: [PurpleDrop_rev6.3_fab.pfd](hardware/output/PurpleDrop_rev6.3_fab.pdf)
+Fab drawing: [PurpleDrop_rev6.4_fab.pfd](hardware/output/PurpleDrop_rev6.4_fab.pdf)
 
-Bill of Materials: [PurpleDrop_rev6.3_bom.csv](hardware/output/PurpleDrop_rev6.3_bom.csv)
+Bill of Materials: [PurpleDrop_rev6.4_bom.csv](hardware/output/PurpleDrop_rev6.4_bom.csv)
 
 ![Front View](hardware/output/front_render.png)
 ![Back View](hardware/output/back_render.png)
