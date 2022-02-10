@@ -8,6 +8,8 @@ Bug fixes to 6.3:
 
 # Rev 6.3 (Nov 2021)
 
+Preliminary/development release. Not recommended.
+
 Bug fixes for rev 6.2:
 
 - Switch back to PCA9685
@@ -23,6 +25,8 @@ Errata:
   use of ISENSE line).
 
 # Rev 6.2 (Aug 2021)
+
+Preliminary/development release. Not recommended.
 
 Updated for current parts availability.
 
