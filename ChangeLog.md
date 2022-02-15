@@ -1,3 +1,42 @@
+# Rev 6.4 (Dec 2021)
+
+Bug fixes to 6.3:
+
+- Fix ISENSE bug in 6.3, by adding diode to clamp negative outputs. Adds D68,
+  R71, and C63.
+- Correct digikey part number for J9 (barrel jack)
+
+# Rev 6.3 (Nov 2021)
+
+Preliminary/development release. Not recommended.
+
+Bug fixes for rev 6.2:
+
+- Switch back to PCA9685
+- Correct swapped silk designators for R28/R29
+- Change C59 from 0.01uF to 0.1uF (VHV_TARGET_PWM filter)
+- Change R29 from 511ohm to 0 (Current integrator output filter)
+
+Errata:
+
+- Large currents cause negative voltage on SAMG input pin, which can reset
+  the device when too much liquid is on the board. This board should only be
+  use with ISENSE trace cut (optionally, can add resistor and diode to re-enable
+  use of ISENSE line).
+
+# Rev 6.2 (Aug 2021)
+
+Preliminary/development release. Not recommended.
+
+Updated for current parts availability.
+
+- Switches MCU from STM32F13 to ATSAMG55
+- Adds negative supply rail for current sensing op-amp
+- Changes PWM driver from PCA9685 to PCA9532
+- Adds current sense input to MCU ADC
+- Makes several other functionally equivalent parts changes, that should be
+  transparent to software.
+
 # Rev 6.1 (Nov 2020)
 
 Functionally equivalent to rev 6, but fixes several issues with the rev 6 design.

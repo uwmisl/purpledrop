@@ -5,10 +5,20 @@ D Power symbol creates a global label with name "VDD"
 K power-flag
 $ENDCMP
 #
+$CMP ADG836YRM
+D Dual SPDT 0.5Ω Bidirectional Analog Switch, MSOP-10
+K switch analog SPDT
+$ENDCMP
+#
 $CMP LM4041L
 D Precision Micropower Shunt Voltage Reference, TO-92
 K diode device voltage reference shunt
 F http://www.ti.com/lit/ds/symlink/lm4041-n.pdf
+$ENDCMP
+#
+$CMP PCA9532PW
+D 16-channel 8-bit PWM I2C-bus LED controller  TSSOP
+K PWM LED driver I2C TSSOP
 $ENDCMP
 #
 $CMP SW_Push_4pin_12common
